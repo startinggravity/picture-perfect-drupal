@@ -1,117 +1,200 @@
 <!doctype html>
 <html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Making your Responsive Site Picture Perfect</title>
+  <meta name="description" content="Discover the current and stable trends of using images in responsive web design.">
+  <meta name="author" content="Jim Smith / Hakim El Hattab">
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <link rel="stylesheet" href="css/reveal.min.css">
+  <link rel="stylesheet" href="css/smith-default.css" id="theme">
+  <!-- For syntax highlighting -->
+  <link rel="stylesheet" href="lib/css/zenburn.css">
+  <!-- If the query includes 'print-pdf', include the PDF print sheet -->
+  <script>
+    if( window.location.search.match( /print-pdf/gi ) ) {
+    var link = document.createElement( 'link' );
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = 'css/print/pdf.css';
+      document.getElementsByTagName( 'head' )[0].appendChild( link );
+    }
+  </script>
 
-	<head>
-		<meta charset="utf-8">
+  <!--[if lt IE 9]>
+  <script src="lib/js/html5shiv.js"></script>
+  <![endif]-->
+</head>
 
-		<title>Making your Responsive Site Picture Perfect</title>
+<body>
+  <div class="reveal">
 
-		<meta name="description" content="Discover the current and stable trends of using images in responsive web design.">
-		<meta name="author" content="Jim Smith / Hakim El Hattab">
+    <!-- Title -->
+    <div class="slides">
+      <section>
+        <h2>Making your Responsive Site</h2>
+        <h1>Picture Perfect</h1>
+          <p>
+            <small>Presented July 31, 2014 at <a href="http://2014.capitalcampandgovdays.com/capital-camp-and-gov-days/sessions/making-your-responsive-site-picture-perfect">Capital Camp and Gov Days '14</a></small>
+          </p>
+        <aside class="notes">
+Session starts at 2:00 p.m.
+        </aside>
+      </section>
 
-		<meta name="apple-mobile-web-app-capable" content="yes" />
-		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+      <!-- Introduction -->
+      <section>
+        <h2>A Quick Introduction</h2>
+        <img src="images/picture-jns.jpg" alt="Jim Smith"/>
+        <h3>Jim Smith</h3>
+        <ul>
+          <li class="fragment">Front-end Drupal Developer at <a href="http://www.dsfederal.com/">DSFederal</a></li>
+          <li class="fragment">Developing Drupal sites since 2005</li>
+          <li class="fragment"><a href="https://www.drupal.org/u/jimsmith" alt="Jim Smith">Drupal user #16880</a></li>
+        </ul>
+        <aside class="notes">
+[reveal list items]
+        </aside>
+      </section>
 
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+      <!-- goals 1-->
+      <section data-transition="slide" data-background-transition="slide" data-background="images/street-238458_1920.jpg">
+        <h2 class="text-background">Where are we trying to go?</h2>
+        <aside class="notes">
+What are our goals? Where are we trying to go?
+        </aside>
+      </section>
 
-		<link rel="stylesheet" href="css/reveal.min.css">
-		<link rel="stylesheet" href="css/theme/default.css" id="theme">
+      <!-- goals 2-->
+      <section data-transition="slide" data-background-transition="slide" data-background="images/html5-171876_1920.jpg">
+        <h1 class="text-background">Great looking websites</h1>
+        <aside class="notes">
+Great looking websites, right?
 
-		<!-- For syntax highlighting -->
-		<link rel="stylesheet" href="lib/css/zenburn.css">
+That's a good goal, but it's not enough
+        </aside>
+      </section>
 
-		<!-- If the query includes 'print-pdf', include the PDF print sheet -->
-		<script>
-			if( window.location.search.match( /print-pdf/gi ) ) {
-				var link = document.createElement( 'link' );
-				link.rel = 'stylesheet';
-				link.type = 'text/css';
-				link.href = 'css/print/pdf.css';
-				document.getElementsByTagName( 'head' )[0].appendChild( link );
-			}
-		</script>
+        <!-- Easy fix -->
+        <section class="easy-fix">
+          <h2>An Easy Fix</h2>
+          <pre><code data-trim>
+            img { max-width: 100%; }
+          </code></pre>
+          <p class="fragment">Except...</p>
+          <p class="fragment">This won't work on IE 6 or 7</p>
+          <aside class="notes">
+            This little trick makes images scalable! The image's size is determined by the container around it.
 
-		<!--[if lt IE 9]>
-		<script src="lib/js/html5shiv.js"></script>
-		<![endif]-->
-	</head>
+            Setting max-width to 100% ensures the image does not scale larger than its actual size
 
-	<body>
+            [reveal text] Won't work on IE 6 or 7.
+          </aside>
+        </section>
 
-		<div class="reveal">
+        <!-- Easy fix 2 -->
+        <section class="easy-fix">
+          <h2>An Easy Fix for IE 6 & 7</h2>
+          <pre><code data-trim>
+            img { width: 100%; }
+          </code></pre>
 
-			<!-- Title -->
-			<div class="slides">
-				<section>
-					<h2>Making your Responsive Site</h2>
-					<h1>Picture Perfect</h1>
+          <aside class="notes">
+            Use width 100%.
+          </aside>
+        </section>
 
-					<p>
-						<small>Presented July 31, 2014 at <a href="http://2014.capitalcampandgovdays.com/capital-camp-and-gov-days/sessions/making-your-responsive-site-picture-perfect">Capital Camp and Gov Days '14</a></small>
-					</p>
-					<aside class="notes">
-					        start at 2:00 p.m.
-					    </aside>
-				</section>
+        <!-- The End -->
+        <section>
+          <h1>Thank You</h1>
+        </section>
 
-				<!-- Introduction -->
-				<section>
-					<h2>A Quick Introduction</h2>
-					<img src="images/picture-jns.jpg" alt="Jim Smith"/>
-					<h3>Jim Smith</h3>
-					<ul>
-						<li class="fragment">Front-end Drupal Developer at <a href="http://www.dsfederal.com/">DSFederal</a></li>
-						<li class="fragment">Developing Drupal sites since 2005</li>
-						<li class="fragment"><a href="https://www.drupal.org/u/jimsmith">Drupal user #16880</a></li>
-					</ul>
+        <!-- Not easy -->
+        <section data-transition="slide" data-background-transition="slide" data-background="images/alone-62253_1920.jpg">
+          <h3 class="text-background">You didn't really think it would be<br/>that easy, did you?</h3>
+          <aside class="notes">
+Responsive sites need more than just resizable images
+          </aside>
+        </section>
 
-					<aside class="notes">
-						step through
-					</aside>
-				</section>
+        <!-- tools 1 -->
+        <section data-transition="slide" data-background-transition="slide" data-background="images/deadman-ranch-223774_1920.jpg">
+          <h1 class="text-background">It's all a matter of using the right tools</h1>
+          <aside class="notes">
+          [reveal text] It's all a matter of using the right tools
+          </aside>
+        </section>
+
+        <!-- tools 2 -->
+        <section>
+          <h2>What we'll use</h2>
+          <ul>
+            <li class="fragment">Media Queries</li>
+            <li class="fragment">Breakpoints</li>
+            <li class="fragment">CSS Preprocessor (Sass)</li>
+            <li class="fragment">Compass</li>
+            <li class="fragment">Modernizr.js</li>
+            <li class="fragment">Vector Graphics (SVG)</li>
+            <li class="fragment">Sprites</li>
+          </ul>
+          <aside class="notes">
+[reveal text]
+Media queries
+Breakpoints
+CSS Preprocessor (Sass)
+Compass
+Modernizr
+SVG
+Sprites
+          </aside>
+        </section>
+
+        <!-- tools 3 -->
+        <section class="drupal">
+          <h2>And we'll use</h2>
+          <ul>
+            <li class="fragment grow">Picture Module</li>
+            <li class="fragment grow">Breakpoints Module</li>
+          </ul>
+          <p><img src="/images/druplicon.png" alt="Drupal logo"/>
+        </section>
 
 
-				<!-- The End -->
-				<section>
-					<h1>Thank You</h1>
-				</section>
 
-			</div>
+    </div>
+  </div>
 
-		</div>
+  <script src="lib/js/head.min.js"></script>
+  <script src="js/reveal.min.js"></script>
 
-		<script src="lib/js/head.min.js"></script>
-		<script src="js/reveal.min.js"></script>
+  <script>
+  // Full list of configuration options available here:
+  // https://github.com/hakimel/reveal.js#configuration
+  Reveal.initialize({
+    controls: true,
+    progress: true,
+    history: true,
+    center: true,
+    slideNumber: true,
+    theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+    transition: Reveal.getQueryHash().transition || 'concave', // default/cube/page/concave/zoom/linear/fade/none
 
-		<script>
+    // Parallax scrolling
+    // parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+    // parallaxBackgroundSize: '2100px 900px',
 
-			// Full list of configuration options available here:
-			// https://github.com/hakimel/reveal.js#configuration
-			Reveal.initialize({
-				controls: true,
-				progress: true,
-				history: true,
-				center: true,
-
-				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
-				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
-
-				// Parallax scrolling
-				// parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
-				// parallaxBackgroundSize: '2100px 900px',
-
-				// Optional libraries used to extend on reveal.js
-				dependencies: [
-					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
-					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
-					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
-				]
-			});
-
-		</script>
-
-	</body>
+    // Optional libraries used to extend on reveal.js
+    dependencies: [
+      { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+      { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+          { src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+          { src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+        ]
+      });
+    </script>
+</body>
 </html>

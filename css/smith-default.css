@@ -170,8 +170,22 @@ body {
 }
 
 /*********************************************
- * Stuff
+ * My Stuff
  *********************************************/
+ .reveal span.invisible {
+   position: absolute;
+   width: 1px; /* Setting this to 0 make it invisible for VoiceOver */
+   height: 1px; /* Setting this to 0 make it invisible for VoiceOver */
+   padding: 0;
+   margin: -1px;
+   border: 0;
+   clip: rect(0 0 0 0);
+   overflow: hidden;
+ }
+
+.reveal .state-background {
+  background: transparent url(../images/dsfederal.png) no-repeat 2% 98%;
+}
 
 .text-background {
   padding: 40px 20px !important;
@@ -179,12 +193,26 @@ body {
   -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)"; /* For IE 8*/
 }
 
+.text-large {
+  font-size: 50px !important;
+}
+
 .reveal section.drupal img {
   margin-top: 30px;
   background: none;
   border: none;
   box-shadow: none;
- }
+}
+
+.reveal .sassmeister a {
+  display: block;
+  position: relative;
+  top: 100px;
+  height: 52px;
+  width: 100px;
+  margin: 0 auto;
+  background: url(/images/sassmeister.png) no-repeat;
+}
 
 .easy-fix pre {
   width: 50%;

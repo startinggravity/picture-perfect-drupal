@@ -205,12 +205,12 @@ body {
 }
 
 .reveal .sassmeister a {
-  display: block;
   position: relative;
   top: 100px;
-  height: 52px;
-  width: 100px;
-  margin: 0 auto;
+  padding-top: 26px;
+  padding-bottom: 26px;
+  padding-left: 110px;
+  font-size: 16px;
   background: url(/images/sassmeister.png) no-repeat;
 }
 

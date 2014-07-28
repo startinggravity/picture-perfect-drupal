@@ -33,6 +33,13 @@
 
     <!-- Title -->
     <div class="slides">
+    <section>
+      <p>How much do you already know about</p>
+      <h2>Making your Responsive Site<br/>Picture Perfect?</h2>
+      <p>Please take a moment to answer this brief survey:</p>
+      <p><a href="http://bit.ly/picture-perfect-drupal" title="Survey Monkey">http://bit.ly/picture-perfect-drupal</a></p>
+    </section>
+
       <section>
         <h2>Making your Responsive Site</h2>
         <h1>Picture Perfect</h1>
@@ -40,7 +47,7 @@
             <small>Presented July 31, 2014 at <a href="http://2014.capitalcampandgovdays.com/capital-camp-and-gov-days/sessions/making-your-responsive-site-picture-perfect">Capital Camp and Gov Days '14</a></small>
           </p>
         <aside class="notes">
-Session starts at 2:00 p.m.
+This session will be repeated at the Asheville and Chattanooga Drupal camps.
         </aside>
       </section>
 
@@ -51,11 +58,11 @@ Session starts at 2:00 p.m.
         <ul>
           <li class="fragment">Oak Ridge, Tenn.</li>
           <li class="fragment">Front-end Drupal Developer at <a href="http://www.dsfederal.com/">DSFederal</a></li>
-          <li class="fragment">Developing Drupal sites since 2005</li>
+          <li class="fragment">Started using Drupal in 2005</li>
           <li class="fragment"><a href="https://www.drupal.org/u/jimsmith" alt="Jim Smith">Drupal user #16880</a></li>
         </ul>
         <aside class="notes">
-[reveal list items]
+[reveal]
         </aside>
       </section>
 
@@ -64,14 +71,16 @@ Session starts at 2:00 p.m.
         <h2>Get a copy of this Presentation</h2>
         <p>Download PDF at<br/><a href="https://github.com/startinggravity/picture-perfect-drupal/Making_your_Responsive_Site_Picture_Perfect.pdf" title="Github">https://github.com/startinggravity/picture-perfect-drupal/Making_your_Responsive_Site_Picture_Perfect.pdf</a></p>
         <p>Download code at<br/><a href="https://github.com/startinggravity/picture-perfect-drupal" title="Github">https://github.com/startinggravity/picture-perfect-drupal</a></p>
-
+        <aside class="notes">
+Download a copy of the presentation to get the links.
+        </aside>
       </section>
 
       <!-- goals 1-->
       <section data-transition="slide" data-background-transition="slide" data-background="images/street-238458_1920.jpg">
         <h2 class="text-background">Where are we trying to go?</h2>
         <aside class="notes">
-What are our goals? Where are we trying to go?
+What are our goals for this session? Where are we trying to go?
         </aside>
       </section>
 
@@ -79,9 +88,7 @@ What are our goals? Where are we trying to go?
       <section data-transition="slide" data-background-transition="slide" data-background="images/html5-171876_1920.jpg">
         <h1 class="text-background">Great looking websites</h1>
         <aside class="notes">
-Great looking websites, right?
-
-That's a good goal, but it's not enough
+We want great looking websites, yes, but that's not enough.
         </aside>
       </section>
 
@@ -89,6 +96,9 @@ That's a good goal, but it's not enough
       <section>
         <h2>...that look good on any device</h2>
         <img src="images/devices.png" alt="devices"/>
+        <aside class="notes">
+Our sites must look good on any device, including devices not yet invented.
+        </aside>
       </section>
 
       <!-- Easy fix -->
@@ -104,11 +114,10 @@ That's a good goal, but it's not enough
         <p class="fragment">This won't work on IE 6 or 7</p>
         <p class="sassmeister"><a href="http://sassmeister.com/gist/startinggravity/4f7f692eb60e92c23ece" title="Sassmeister" target="_blank">http://sassmeister.com/gist/startinggravity/4f7f692eb60e92c23ece</a></p>
         <aside class="notes">
-This little trick makes images scalable! The image's size is determined by the container around it.
+To make an image fit any device, make it scalable. Fortunately, just a little bit of CSS will make that happen.
+Setting max-width to 100% ensures the image does not scale larger than its actual size and it will be constrained by the container around it.
 
-Setting max-width to 100% ensures the image does not scale larger than its actual size
-
-[reveal text] Won't work on IE 6 or 7.
+[reveal] This CSS won't work on IE 6 or 7.
         </aside>
       </section>
 
@@ -123,20 +132,23 @@ Setting max-width to 100% ensures the image does not scale larger than its actua
         </code></pre>
 
         <aside class="notes">
-Use width 100%.
+Use width 100% on IE 6 and 7 if you must design for those browsers.
         </aside>
       </section>
 
         <!-- The End -->
         <section>
           <h1>Thank You</h1>
+          <aside class="notes">
+Thanks and enjoy the rest of the camp.
+          </aside>
         </section>
 
         <!-- Not easy -->
         <section data-transition="slide" data-background-transition="slide" data-background="images/alone-62253_1920.jpg">
           <h3 class="text-background">You didn't really think it would be<br/>that easy, did you?</h3>
           <aside class="notes">
-Responsive sites need more than just resizable images
+Responsive sites need more than just resizable images!
           </aside>
         </section>
 
@@ -150,10 +162,7 @@ Responsive sites need more than just resizable images
   }
           </code></pre>
           <aside class="notes">
-This little trick makes images scalable! The image's size is determined by the container around it.
-
-Setting max-width to 100% ensures the image does not scale larger than its actual size
-[reveal text] Won't work on IE 6 or 7.
+Looking at our easy solution we see the problem: We're treating every image the same, regardless of where it appears.
           </aside>
         </section>
 
@@ -161,21 +170,27 @@ Setting max-width to 100% ensures the image does not scale larger than its actua
         <section>
           <h3>One size does not fit all!</h3>
           <p>Display Size</p>
-          <p><img src="/images/image-size.jpg" alt="one size"/>
+          <p><img src="images/image-size.jpg" alt="one size"/>
+          <aside class="notes">
+We should never try to load images that are larger than necessary.
+          <aside>
         </section>
 
         <!-- Problem 2 -->
         <section>
           <h3>One size does not fit all!</h3>
           <p>Pixel Density</p>
-          <p><img src="/images/retina.png" alt="Retina"/>
+          <p><img src="images/retina.png" alt="Retina"/>
+          <aside class="notes">
+We also need to understand how high density displays handle images. An image with a 2x multiplier will have four times the number of pixels.
+          <aside>
         </section>
 
         <!-- tools 1 -->
         <section data-transition="slide" data-background-transition="slide" data-background="images/deadman-ranch-223774_1920.jpg">
           <h2 class="text-background">For great images you must<br/>use the right tools</h2>
           <aside class="notes">
-          [reveal text] It's all a matter of using the right tools
+Producing sites with great image is all a matter of using the right tools.
           </aside>
         </section>
 
@@ -187,19 +202,13 @@ Setting max-width to 100% ensures the image does not scale larger than its actua
             <li class="fragment">Breakpoints</li>
             <li class="fragment">CSS Preprocessor (Sass)</li>
             <li class="fragment">Compass</li>
+            <li class="fragment">Sprites</li>
+            <li class="fragment">Icon Fonts</li>
             <li class="fragment">Modernizr.js</li>
             <li class="fragment">Vector Graphics (SVG)</li>
-            <li class="fragment">Sprites</li>
           </ul>
           <aside class="notes">
-[reveal text]
-Media queries
-Breakpoints
-CSS Preprocessor (Sass)
-Compass
-Modernizr
-SVG
-Sprites
+Media queries - Breakpoints - CSS Preprocessor (Sass) - Compass - Modernizr - SVG - Sprites
           </aside>
         </section>
 
@@ -210,57 +219,9 @@ Sprites
             <li class="fragment grow">Picture Module</li>
             <li class="fragment grow">Breakpoints Module</li>
           </ul>
-          <p><img src="/images/druplicon.png" alt="Drupal logo"/>
-        </section>
-
-        <!-- Picture Module 1 -->
-        <section>
-          <h2>Picture Module</h2>
-          <pre><code>
-<picture>
-  <!--[if IE 9]><video style="display: none;"><![endif]-->
-  <source srcset="/files/styles/large1xbreakpoints_theme_mobile_1x/public/page_images/1_About_Home.jpg?itok=HDuKyOtW 1x, /files/styles/large15xbreakpoints_theme_mobile_1_5x/public/page_images/1_About_Home.jpg?itok=MXrRULa9 1.5x, /files/styles/large2xbreakpoints_theme_mobile_2x/public/page_images/1_About_Home.jpg?itok=MIkT-gdU 2x" media="(min-width: 30em)">
-  <source srcset="/files/styles/large1xbreakpoints_theme_mobile_1x/public/page_images/1_About_Home.jpg?itok=HDuKyOtW 1x, /files/styles/large15xbreakpoints_theme_mobile_1_5x/public/page_images/1_About_Home.jpg?itok=MXrRULa9 1.5x" media="(min-width: 20em)">
-  <!--[if IE 9]></video><![endif]-->
-  <img alt="About" title="" src="/files/styles/large1xbreakpoints_theme_mobile_1x/public/page_images/1_About_Home.jpg?itok=HDuKyOtW" draggable="false">
-</picture>
-          </pre></code>
-          <p><a href="https://www.drupal.org/project/picture" title="Picture Module">https://www.drupal.org/project/picture</a>
-        </section>
-
-        <!-- Picture Module 2 -->
-        <section data-transition="slide" data-background-transition="slide" data-background="images/bread-315690.jpg">
-          <h3 class="text-background">Picturefill Polyfill goodness baked in!</h3>
-          <h3 class="text-background">Available now in Drupal 7<br/><br/>Included in core for Drupal 8</h3>
+          <p><img src="images/druplicon.png" alt="Drupal logo"/>
           <aside class="notes">
-Magic in the Picturefill
-
-Backported to D7
-          </aside>
-        </section>
-
-        <!-- Picture Module 3 -->
-        <section>
-          <h2>Picture Module</h2>
-          <img src="/images/select-picture.jpg" alt="Select picture"/>
-          <aside class="notes">
-We won't go through the entire configuration here.
-
-Good tutorials are available online and a link to one is available at the end of this presentation.
-
-It's easy to forget to change the image setting, which is the key part of implementing this module.
-          </aside>
-        </section>
-
-        <!-- Breakpoints Module 1 -->
-        <section>
-          <h2>Breakpoints Module</h2>
-          <img src="/images/picture-breakpoints.png" alt="Select picture"/>
-          <p><a href="https://www.drupal.org/project/breakpoints" title="Breakpoints Module">https://www.drupal.org/project/breakpoints</a>
-          <aside class="notes">
-You can't talk about Picture module without talking about Breakpoints module, which creates custom breakpoints using media queries to define them.
-
-Before we talk about about how these work, let's take a step back so that we can pick up some tips to make the process easier.
+These two modules work together with image styles, already in core, to deliver images appropriate to the device size and display density.
           </aside>
         </section>
 
@@ -293,7 +254,7 @@ Best practice: Media queries are hard to keep track of unless you use a CSS prep
         <!-- Definitions 3 -->
         <section>
           <h2>Multiplier</h2>
-          <p>Used by the Picture module to provide high density (Retina) images.</p>
+          <p>A trigger for the use of high density (Retina) images.</p>
           <aside class="notes">
 Best practice: Enlarge the orginal image by the multiplier. What matters is number of pixels.
           </aside>
@@ -302,7 +263,7 @@ Best practice: Enlarge the orginal image by the multiplier. What matters is numb
         <!-- Definitions 4 -->
         <section>
           <h2>CSS Preprocessor</h2>
-          <p>Using a preprocessed language to parse code into CSS. This allows for variables, selector inheritance and other shorthand methods to be used to speed up coding and make the CSS more flexible.</p>
+          <p>A preprocessed language to parse code into CSS. This allows for variables, selector inheritance and other shorthand methods to be used to speed up coding and make the CSS more flexible.</p>
           <aside class="notes">
 Best practice: Use SCSS, a newer version of Sass.
           </aside>
@@ -317,27 +278,96 @@ Best practice: Use SCSS, a newer version of Sass.
           </aside>
         </section>
 
+
+        <!-- Picture Module 1 -->
+        <section data-transition="slide" data-background-transition="slide" data-background="images/bread-315690.jpg">
+          <h3 class="text-background">Picture Module:</br/>Picturefill Polyfill goodness baked in!</h3>
+          <h3 class="text-background">Available now in Drupal 7<br/><br/>Included in core for Drupal 8</h3>
+          <aside class="notes">
+Picture module makes use of the latest verstion of Picturefill Polyfill. A polyfill is a JavaScript method of adding stuff the browser might not natively do on its own.
+          </aside>
+        </section>
+
+        <!-- Picture Module 2 -->
+        <section>
+          <h2>Picture Module</h2>
+          <pre><code>
+  <picture>
+    <!--[if IE 9]><video style="display: none;"><![endif]-->
+    <source srcset="images/extralarge.jpg" media="(min-width: 1000px)">
+    <source srcset="images/large.jpg" media="(min-width: 800px)">
+    <!--[if IE 9]></video><![endif]-->
+    <img srcset="images/medium.jpg" alt="A picture">
+  </picture>
+          </pre></code>
+          <p><a href="https://www.drupal.org/project/picture" title="Picture Module">https://www.drupal.org/project/picture</a>
+          <aside class="notes">
+Here is an example of code that the Picturefill polyfill (and therefore, Picture module) can use. The polyfill allows for the use of the picture, srcset and src.
+          </aside>
+        </section>
+
+        <!-- Breakpoints Module 1 -->
+        <section>
+          <h2>Breakpoints Module</h2>
+          <img src="images/picture-breakpoints.png" alt="Select picture"/>
+          <p><a href="https://www.drupal.org/project/breakpoints" title="Breakpoints Module">https://www.drupal.org/project/breakpoints</a>
+          <aside class="notes">
+You can't talk about Picture module without talking about Breakpoints module, which creates custom breakpoints using media queries to define them.
+          </aside>
+        </section>
+
+        <!-- Picture & Breakpoints Benefits 1 -->
+        <section>
+          <h2>Picture &amp; Breakpoints Modules</h2>
+          <img src="images/different-sizes.jpg" alt="Different Sizes"/>
+          <p>Using these modules with Image Styles allows you to select images of different sizes for your breakpoints.</p>
+          <aside class="notes">
+You don't always want images in the same size ratio, and using Image Styles allows you to change that, as well as the size.
+          <aside>
+        </section>
+
+        <!-- Picture & Breakpoints Benefits 2 -->
+        <section>
+          <h2>Picture &amp; Breakpoints Modules</h2>
+          <img src="images/different-density.jpg" alt="Different Densities"/>
+          <p>Trigger the use of high-density images.</p>
+        </section>
+
+        <!-- Picture & Breakpoints Benefits 2 -->
+        <section>
+          <h2>Picture &amp; Breakpoints Modules</h2>
+          <img src="images/scale-image.jpg" alt="Scale picture"/>
+          <p>High-density versions can be created automatically with Image Styles.</p>
+          <aside class="notes">
+Start with a standard size. Create the same then and then increase the size by multiplying the dimensions with the multiplier.
+          </aside>
+        </section>
+
         <!-- Set Breakpoints 1 -->
         <section>
-          <h2>Define breakpoints first</h2>
+          <h2>Picture &amp; Breakpoints Modules</h2>
+          <p>Define breakpoints first</p>
           <pre><code>
+    @import "breakpoint";
+    @import "compass";
+
     // min-width (by default) if only a number
     $breakpoint-hamburger: 20em; // 320px
     $breakpoint-tabs: 36.250em; // 580px
     $breakpoint-twocolumn: 56.25em; // 900px
     $breakpoint-fullfeatures: 68.75em; // 1100px
-
-    // Resolution Breakpoints
-    $normaldpi: min-resolution 1.0dppx;
-    $highdpi: min-resolution 1.5dppx;
-    $highestdpi: min-resolution 2.0dppx;
           </pre></code>
+          <p>If you  use Sass, use the Breakpoint Compass extension.</p>
           <p class="sassmeister"><a href="http://sassmeister.com/gist/ac687ed661abcf3aa5e5" title="Sassmeister" target="_blank">http://sassmeister.com/gist/ac687ed661abcf3aa5e5</a></p>
+          <aside class="notes">
+
+          </aside>
         </section>
 
         <!-- Set Breakpoints 2 -->
         <section>
-          <h2>Set breakpoints in theme.info</h2>
+          <h2>Picture &amp; Breakpoints Modules</h2>
+          <p>Set breakpoints in theme.info</p>
           <pre><code>
     ; ========================================
     ; Breakpoints
@@ -357,27 +387,125 @@ Best practice: Use SCSS, a newer version of Sass.
     multipliers[hamburger][] = 2x
           </pre></code>
           <p>Breakpoint order should be largest to smallest.</p>
+          <aside class="notes">
+
+          </aside>
         </section>
 
         <!-- Set Breakpoints 3 -->
         <section>
-          <h2>
+          <h2>Picture &amp; Breakpoints Modules</h2>
+          <p>Breakpoints in theme.info will load automatically</p>
+          <p><img src="images/breakpoints-installed.jpg" alt="breakpoints"/></p>
+          <p>Clear cache to see breakpoints in the configuration page.</p>
+          <aside class="notes">
 
+          </aside>
+        </section>
+
+        <!-- Picture Module 4 -->
+        <section>
+          <h2>Picture &amp; Breakpoints Modules</h2>
+          <p>Map images to breakpoints and multpliers</p>
+          <img src="images/map-images.jpg" alt="Map images to breakpoints"/>
+          <aside class="notes">
+Map images to breakpoints and the multipliers
+          </aside>
+        </section>
+
+        <!-- Picture Module 5 -->
+        <section>
+          <h2>Picture &amp; Breakpoints Modules</h2>
+          <img src="images/select-picture.jpg" alt="Select picture"/>
+          <aside class="notes">
+Good tutorials are available online. It's easy to forget to change the image setting, which is the key part of implementing this module.
+          </aside>
+        </section>
+
+        <!-- Picture Module 6 -->
+        <section>
+          <h2>Picture &amp; Breakpoints Modules</h2>
+          <img src="images/images-in-use.jpg" alt="Images"/>
+          <p>Done correctly, the right image for the display size and density will be delivered.</p>
+          <aside class="notes">
+Any image that should be uploaded and applied on the fly should use these modules.
+          </aside>
+        </section>
+
+        <!-- Sprites and Icon Fonts -->
+        <section>
+          <h2>When Not to Use<br/>Picture &amp; Breakpoints Modules</h2>
+          <p>Not every image is a photo,</p>
+          <p><img src="images/icons.jpg" alt="Icon fonts"/></p>
+          <p>but every image needs to be handled responsively.</p>
+        </section>
+
+        <!-- Sprites -->
+        <section>
+          <h2>Sprites</h2>
+          <p>Several small images combined into a larger image and selected for display through CSS.</p>
+        </section>
+
+        <!-- Sprites -->
+        <section>
+          <h2>Sprites</h2>
+          <p><img src="images/sprites.jpg" alt="sprites"/></p>
+          <pre><code>
+    .stars-half, .stars-one, .stars-one-half, .stars-two, .stars-two-half, .stars-three, .stars-three-half, .stars-four, .stars-four-half, .stars-five, .stars-none {
+      background-image: url("../images/sprite.png");
+      background-repeat: no-repeat;
+      display: inline-block;
+    }
+    .stars-half {
+      background-position: 0 0;
+      height: 17px;
+      width: 8px;
+    }
+    .stars-one {
+      background-position: -10px 0;
+      height: 17px;
+      width: 16px;
+    }
+    ...
+          </pre></code>
+        </section>
+
+        <!-- Sprites 2 -->
+        <section>
+          <h2>Several Ways to Make Sprites</h2>
+          <p>(Hardest -> Easiest)</p>
+          <ul>
+            <li>Photoshop or other image creation software</li>
+            <li>Online tool, such as <a href="http://wearekiss.com/spritepad" title="SpritePad">SpritePad</a></li>
+            <li>Application, such as <a href="http://www.mobinodo.com/spritemasterweb/" title="Sprite Master Web">Sprite Master Web</a></li>
+          </ul>
+        </section>
+
+        <!-- Sprites 3 -->
+        <section>
+          <h2>Sprites Aren't Always the Best Approach</h2>
+          <ul>
+            <li>They use more bandwidth than you think. Download size != memory size.</li>
+            <li>They are pain to maintain.</li>
+          </ul>
         </section>
 
         <!-- The End Again -->
         <section>
           <h1>Thank You</h1>
           <h3>(Again)</h3>
+          <aside class="notes">
+Before we get to questions, please note there are several links to resources.
+          </aside>
         </section>
 
         <!-- Additional Resources -->
 
         <section>
-          <h2>Additional Resources</h2>
+          <h2>Resources</h2>
           <ul>
             <li>Choosing A Responsive Image Solution<br/><a href="http://www.smashingmagazine.com/2013/07/08/choosing-a-responsive-image-solution/" title="Choosing A Responsive Image Solution">http://www.smashingmagazine.com/2013/07/08/choosing-a-responsive-image-solution</a></li>
-            <li>Picturefill Polyfill<br/><a href="http://scottjehl.github.io/picturefill/" title="Picturefill Polyfill">Picturefill Polyfill</a></li>
+            <li>Picturefill Polyfill<br/><a href="http://scottjehl.github.io/picturefill/" title="Picturefill Polyfill">http://scottjehl.github.io/picturefill</a></li>
             <li>Responsive Images with Drupal using the Picture Module<br/><a href="http://www.ibeccreative.com/2014/06/Responsive-Images-with-Drupal-using-the-Picture-Module/" title="Responsive Images with Drupal using the Picture Module">http://www.ibeccreative.com/2014/06/Responsive-Images-with-Drupal-using-the-Picture-Module</a></li>
             <li>Towards A Retina Web<br/><a href="http://www.smashingmagazine.com/2012/08/20/towards-retina-web/" title="Towards A Retina Web">http://www.smashingmagazine.com/2012/08/20/towards-retina-web</a></li>
             <li>Using Sass Breakpoints Effectively<br/><a href="http://www.mediacurrent.com/blog/using-breakpoints-effectively" title="Using Sass Breakpoints Effectively">http://www.mediacurrent.com/blog/using-breakpoints-effectively</a></li>
@@ -387,11 +515,23 @@ Best practice: Use SCSS, a newer version of Sass.
         <!-- Additional Resources 2 -->
 
         <section>
-          <h2>Additional Resources</h2>
+          <h2>Resources</h2>
           <ul>
+            <li>Breakpoint Compass Extension<br/><a href="http://breakpoint-sass.com/" title="Breakpoint">http://breakpoint-sass.com</a></li>
             <li>Sass: Syntactically Awesome Style Sheets<br/><a href="http://sass-lang.com/" title="Sass">http://sass-lang.com</a></li>
             <li>Compass CSS Authoring Framework<br/><a href="http://compass-style.org/" title="Compass">http://compass-style.org</a></li>
             <li>7 Habits of Highly Effective Media Queries<br/><a href="http://bradfrostweb.com/blog/post/7-habits-of-highly-effective-media-queries/" title="7 Habits of Highly Effective Media Queries">http://bradfrostweb.com/blog/post/7-habits-of-highly-effective-media-queries</a></li>
+            <li>SpritePad<br/><a href="http://wearekiss.com/spritepad" title="SpritePad">http://wearekiss.com/spritepad</a></li>
+          </ul>
+        </section>
+
+        <!-- Additional Resources 3 -->
+
+        <section>
+          <h2>Resources</h2>
+          <ul>
+            <li>Sprite Master Web<br/><a href="http://www.mobinodo.com/spritemasterweb/" title="Sprite Master Web">http://www.mobinodo.com/spritemasterweb</a></li>
+            <li>Spriting With Compass<br/><a href="http://compass-style.org/help/tutorials/spriting/" title="Spriting With Compass">http://compass-style.org/help/tutorials/spriting</a></li>
             <li>Font Awesome Vector Icons<br/><a href="http://fortawesome.github.io/Font-Awesome/" title="Font Awesome Vector Icons">http://fortawesome.github.io/Font-Awesome</a></li>
           </ul>
         </section>

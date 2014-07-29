@@ -193,6 +193,21 @@ body {
   -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)"; /* For IE 8*/
 }
 
+.reveal ul.text-background  {
+  margin: 0 0 0 0;
+}
+
+.reveal ul.text-background li {
+  margin-left: 50px;
+}
+
+.reveal section img.no-border {
+  background: none;
+  border: none;
+  box-shadow: none;
+}
+
+
 .text-large {
   font-size: 50px !important;
 }

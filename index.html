@@ -32,12 +32,7 @@
   <div class="reveal">
 
     <div class="slides">
-    <section id="survey">
-      <p>How much do you already know about</p>
-      <h2>Making your Responsive Site<br>Picture Perfect?</h2>
-      <p>Please take a moment to answer this brief survey:</p>
-      <p><a href="http://bit.ly/picture-perfect-drupal" title="Survey Monkey">http://bit.ly/picture-perfect-drupal</a></p>
-    </section>
+
 
     <!-- Title -->
       <section id="title">
@@ -45,6 +40,9 @@
         <h1>Picture Perfect</h1>
           <p>
             <small>Presented July 31, 2014 at <a href="http://2014.capitalcampandgovdays.com/capital-camp-and-gov-days/sessions/making-your-responsive-site-picture-perfect">Capital Camp and Gov Days '14</a></small>
+          </p>
+          <p>
+            <small>Previously presented on July 31, 2014 at <a href="http://2014.capitalcampandgovdays.com/capital-camp-and-gov-days/sessions/making-your-responsive-site-picture-perfect">Capital Camp and Gov Days '14</a></small>
           </p>
         <aside class="notes">
 This session will be repeated at the Asheville and Chattanooga Drupal camps.
@@ -68,7 +66,7 @@ This session will be repeated at the Asheville and Chattanooga Drupal camps.
 
       <!-- Presentation details -->
       <section id="download">
-        <h2>Play along a home</h2>
+        <h2>Play along at home</h2>
         <p>Download a PDF and the code from this presentation at<br><a href="http://startinggravity.github.io/picture-perfect-drupal/" title="Github">http://startinggravity.github.io/picture-perfect-drupal</a></p>
         <aside class="notes">
 Download a copy of the presentation to get the links. [view survey]
@@ -181,7 +179,7 @@ We should never try to load images that are larger than necessary.
           <p>Pixel Density</p>
           <p><img src="images/retina.png" alt="Retina">
           <aside class="notes">
-We also need to understand how high density displays handle images. An image with a 2x multiplier will have four times the number of pixels.
+We also need to understand that some displays are capable of handle high density images. An image with a 2x multiplier will have four times the number of pixels.
           <aside>
         </section>
 
@@ -189,7 +187,7 @@ We also need to understand how high density displays handle images. An image wit
         <section id="right-tools" data-transition="slide" data-background-transition="slide" data-background="images/deadman-ranch-223774_1920.jpg">
           <h2 class="text-background">For great images you must<br>use the right tools</h2>
           <aside class="notes">
-Producing sites with great image is all a matter of using the right tools.
+Producing sites with great images is all a matter of using the right tools.
           </aside>
         </section>
 
@@ -235,7 +233,7 @@ Some definitions...
         <!-- Definitions 1 -->
         <section id="definition-1">
           <h2>Breakpoint</h2>
-          <p>A defined point in the display width where changes stuff changes, i.e., the size and position of text, images and columns are changed for better flow and usability.</p>
+          <p>A defined point in the display where we want to make stuff change, such as the size and position of text and images, and the number of columns.</p>
           <aside class="notes">
 Best practice: Don't set breakpoints according to devices. When the page looks bad at a certain size, add a breakpoint.
           </aside>
@@ -273,7 +271,7 @@ Best practice: Use SCSS, a newer version of Sass.
           <h2>Compass</h2>
           <p>Extends the use of Sass by providing reusable patterns.</p>
           <aside class="notes">
-Best practice: Use SCSS, a newer version of Sass.
+Best practice: Use Compass extensions to simplify your workflow and and make Sass do things it can't do on its own.
           </aside>
         </section>
 
@@ -301,7 +299,7 @@ Picture module makes use of the latest verstion of Picturefill Polyfill. A polyf
           </pre></code>
           <p><a href="https://www.drupal.org/project/picture" title="Picture Module">https://www.drupal.org/project/picture</a>
           <aside class="notes">
-Here is an example of code that the Picturefill polyfill (and therefore, Picture module) can use. The polyfill allows for the use of the picture, srcset and src.
+Here is an example of code that Picturefill polyfill (and therefore, Picture module) can use. The will now recognize the use of the picture, srcset and src in your markup.
           </aside>
         </section>
 

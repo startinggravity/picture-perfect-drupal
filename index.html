@@ -39,11 +39,13 @@
         <h2>Making your Responsive Site</h2>
         <h1>Picture Perfect</h1>
           <p>
-            <small>Presented July 31, 2014 at <a href="http://2014.capitalcampandgovdays.com/capital-camp-and-gov-days/sessions/making-your-responsive-site-picture-perfect">Capital Camp and Gov Days '14</a></small>
+            <small>Presented August 23, 2014 at <a href="http://drupalasheville.com/drupal-camp-asheville-2014/sessions/making-your-responsive-site-picture-perfect">Drupal Camp Asheville 2014</a></small>
           </p>
-
+          <p>
+            <small>Previously presented on July 31, 2014 at <a href="http://2014.capitalcampandgovdays.com/capital-camp-and-gov-days/sessions/making-your-responsive-site-picture-perfect">Capital Camp and Gov Days '14</a></small>
+          </p>
         <aside class="notes">
-This session will be repeated at the Asheville and Chattanooga Drupal camps.
+This session will be repeated at the Chattanooga Drupal camps.
         </aside>
       </section>
 
@@ -229,16 +231,7 @@ Some definitions...
         </section>
 
         <!-- Definitions 1 -->
-        <section id="definition-1">
-          <h2>Breakpoint</h2>
-          <p>A defined point in the display where we want to make stuff change, such as the size and position of text and images, and the number of columns.</p>
-          <aside class="notes">
-Best practice: Don't set breakpoints according to devices. When the page looks bad at a certain size, add a breakpoint.
-          </aside>
-        </section>
-
-        <!-- Definitions 2 -->
-        <section id="definition-2">
+        <section id="media-query-definition">
           <h2>Media Query</h2>
           <p>A media type and zero or more expressions that define a style sheet's scope. These may be such things as width, height, color or resolution. </p>
           <aside class="notes">
@@ -246,8 +239,38 @@ Best practice: Media queries are hard to keep track of unless you use a CSS prep
           </aside>
         </section>
 
+        <!-- Definitions 1a -->
+        <section id="media-query-example">
+          <h2>Media Query</h2>
+          <pre><code>
+  @media (max-width: 50.875em) {
+    .links a {
+      display: block;
+      font-weight: 400;
+      height: 70px;
+      color: red;
+    }
+  }
+  @media (min-width: 50.875em) and (max-width: 68.75em) {
+    .links a {
+      height: 90px;
+      color: blue;
+    }
+  }
+          </code></pre>
+        </section>
+
+        <!-- Definitions 2 -->
+        <section id="breakpoint-definition">
+          <h2>Breakpoint</h2>
+          <p>A defined point in the display where we want to make stuff change, such as the size and position of text and images, and the number of columns.</p>
+          <aside class="notes">
+Best practice: Don't set breakpoints according to devices. When the page looks bad at a certain size, add a breakpoint.
+          </aside>
+        </section>
+
         <!-- Definitions 3 -->
-        <section id="definition-3">
+        <section id="multiplier-definition">
           <h2>Multiplier</h2>
           <p>A number indicating the increased total of pixels displayed in an image compared to a standard image.</p>
           <aside class="notes">
@@ -256,18 +279,20 @@ Best practice: Enlarge the orginal image by the multiplier. What matters is numb
         </section>
 
         <!-- Definitions 4 -->
-        <section id="definition-4">
+        <section id="preprocessor-definition">
           <h2>CSS Preprocessor</h2>
           <p>A preprocessed language to parse code into CSS. This allows for variables, selector inheritance and other shorthand methods to be used to speed up coding and make the CSS more flexible.</p>
+          <p><a href="http://sass-lang.com/" title="Sass">Sass: http://sass-lang.com</a></p>
           <aside class="notes">
 Best practice: Use SCSS, a newer version of Sass.
           </aside>
         </section>
 
         <!-- Definitions 5 -->
-        <section id="definition-5">
+        <section id="compass-definition">
           <h2>Compass</h2>
           <p>Extends the use of Sass by providing reusable patterns.</p>
+          <p><a href="http://compass-style.org/" title="Compass">Compass: http://compass-style.org</a></p>
           <aside class="notes">
 Best practice: Use Compass extensions to simplify your workflow and and make Sass do things it can't do on its own.
           </aside>
@@ -305,7 +330,7 @@ Here is an example of code that Picturefill polyfill (and therefore, Picture mod
         <section id="breakpoints">
           <h2>Breakpoints Module</h2>
           <img src="images/picture-breakpoints.png" alt="Select picture">
-          <p><a href="https://www.drupal.org/project/breakpoints" title="Breakpoints Module">https://www.drupal.org/project/breakpoints</a>
+          <p><a href="https://www.drupal.org/project/breakpoints" title="Breakpoints Module">https://www.drupal.org/project/breakpoints</a></p>
           <aside class="notes">
 You can't talk about Picture module without talking about Breakpoints module, which creates custom breakpoints using media queries to define them.
           </aside>
@@ -561,7 +586,7 @@ Icon fonts are treated the same way as any font.
         <!-- Icon Fonts 5-->
         <section id="icon-fonts-5">
           <h2>Font Awesome Library<br>&amp; Font Awesome Module</h2>
-          <p>All the advantages of icon fonts<br>in the convenience of a Drupal module.</p>
+          <p>All the advantages of icon fonts<br>with the convenience of a Drupal module.</p>
           <p><img src="images/font-awesome.jpg" alt="Font Awesome"></p>
           <p><a href="" title="Font Awesome">https://www.drupal.org/project/fontawesome</a></p>
         </section>
@@ -621,27 +646,30 @@ This example shows just one way to use the Font Awesome module.
           </code></pre>
         </section>
 
+        <!-- Old Browsers -->
+        <section id="older-browser" data-transition="slide" data-background-transition="slide" data-background="images/australia-162760_1280.jpg">
+          <h2 class="text-background">What happens when you must design for an older browser?</h2>
+
+        </section>
+
         <!-- Vectors 5 -->
-        <section id="vectors-5">
-          <h2>What happens when you must design for an older browser?</h2>
-          <p>Modernizr to the rescue!</p>
+        <section id="modernizr-1">
+          <h2>Modernizr to the rescue!</h2>
           <p><img src="images/modernizr.jpg" alt="Modernizr"></p>
           <p><a href="http://modernizr.com/" title="Modernizr">http://modernizr.com</a></p>
         </section>
 
         <!-- Vectors 6 -->
-        <section id="vectors-6">
-          <h2>What happens when you must design for an older browser?</h2>
-          <p>Modernizr tells you what you have to work with<br>and what you don't</p>
+        <section id="modernizr-2">
+          <h2>Modernizr tells you what you have to work with<br>and what you don't</h2>
           <p><img src="images/modernizr2.jpg" alt="Modernizr"></p>
           <p><a href="http://modernizr.com/" title="Modernizr">http://modernizr.com</a></p>
           <p class="sassmeister"><a href="http://sassmeister.com/gist/6fa96162d0668cafb813" title="Sassmeister" target="_blank">http://sassmeister.com/gist/6fa96162d0668cafb813</a></p>
         </section>
 
         <!-- Vectors 7 -->
-        <section id="vectors-7">
-          <h2>What happens when you must design for an older browser?</h2>
-          <p>Or run a pixel density media query with<br>the Breakpoint Compass extension!</p>
+        <section id="breakpoint-compass">
+          <h2>Or run a pixel density media query!</h2>
           <pre><code>
     $hidpi: min-resolution 1.5dppx;
     $cross-reso: max-resolution 143dpi;
@@ -702,6 +730,7 @@ Before we get to questions, please note there are several links to resources.
             <li>Choosing A Responsive Image Solution<br><a href="http://www.smashingmagazine.com/2013/07/08/choosing-a-responsive-image-solution/" title="Choosing A Responsive Image Solution">http://www.smashingmagazine.com/2013/07/08/choosing-a-responsive-image-solution</a></li>
             <li>Picturefill Polyfill<br><a href="http://scottjehl.github.io/picturefill/" title="Picturefill Polyfill">http://scottjehl.github.io/picturefill</a></li>
             <li>Responsive Images with Drupal using the Picture Module<br><a href="http://www.ibeccreative.com/2014/06/Responsive-Images-with-Drupal-using-the-Picture-Module/" title="Responsive Images with Drupal using the Picture Module">http://www.ibeccreative.com/2014/06/Responsive-Images-with-Drupal-using-the-Picture-Module</a></li>
+            <li>Responsive Images in Drupal with the Picture Module<br><a href="http://thinkshout.com/blog/2014/07/responsive-images-in-drupal-with-the-picture-module" title="Responsive Images in Drupal with the Picture Module">http://thinkshout.com/blog/2014/07/responsive-images-in-drupal-with-the-picture-module</a></li>
             <li>Towards A Retina Web<br><a href="http://www.smashingmagazine.com/2012/08/20/towards-retina-web/" title="Towards A Retina Web">http://www.smashingmagazine.com/2012/08/20/towards-retina-web</a></li></ul>
         </section>
 
@@ -714,6 +743,7 @@ Before we get to questions, please note there are several links to resources.
             <li>Breakpoint Compass Extension<br><a href="http://breakpoint-sass.com/" title="Breakpoint">http://breakpoint-sass.com</a></li>
             <li>Sass: Syntactically Awesome Style Sheets<br><a href="http://sass-lang.com/" title="Sass">http://sass-lang.com</a></li>
             <li>Compass CSS Authoring Framework<br><a href="http://compass-style.org/" title="Compass">http://compass-style.org</a></li>
+            <li>Getting Started with Sass and Compass in Drupal<br/><a href="http://www.trellon.com/content/blog/sass-and-compass" title="Getting Started with Sass and Compass in Drupal">http://www.trellon.com/content/blog/sass-and-compass</a></li>
             <li>7 Habits of Highly Effective Media Queries<br><a href="http://bradfrostweb.com/blog/post/7-habits-of-highly-effective-media-queries/" title="7 Habits of Highly Effective Media Queries">http://bradfrostweb.com/blog/post/7-habits-of-highly-effective-media-queries</a></li></ul>
         </section>
 

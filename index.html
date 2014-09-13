@@ -31,7 +31,6 @@
 <body>
   <div class="reveal">
 
-    <div class="slides">
 
 
     <!-- Title -->
@@ -39,10 +38,11 @@
         <h2>Making your Responsive Site</h2>
         <h1>Picture Perfect</h1>
           <p>
-            <small>Presented August 23, 2014 at <a href="http://drupalasheville.com/drupal-camp-asheville-2014/sessions/making-your-responsive-site-picture-perfect">Drupal Camp Asheville 2014</a></small>
+            <small>Presented September 13, 2014 at <a href="https://www.drupalcampchattanooga.com/session/making-your-responsive-site-picture-perfect">Drupal Camp Chattanooga 2014</a></small>
           </p>
           <p>
-            <small>Previously presented on July 31, 2014 at <a href="http://2014.capitalcampandgovdays.com/capital-camp-and-gov-days/sessions/making-your-responsive-site-picture-perfect">Capital Camp and Gov Days '14</a></small>
+            <small>Previously presented on July 31, 2014 at <a href="http://2014.capitalcampandgovdays.com/capital-camp-and-gov-days/sessions/making-your-responsive-site-picture-perfect">Capital Camp and Gov Days '14</a></small><br/>
+            <small>and August 23, 2014 at <a href="http://drupalasheville.com/drupal-camp-asheville-2014/sessions/making-your-responsive-site-picture-perfect">Drupal Camp Asheville 2014</a></small>
           </p>
         <aside class="notes">
 This session will be repeated at the Chattanooga Drupal camps.
@@ -104,11 +104,9 @@ Our sites must look good on any device, including devices not yet invented.
         <pre><code>
   img {
     max-width: 100%;
-    height: auto;
   }
         </code></pre>
-        <p class="fragment">Except...</p>
-        <p class="fragment">This won't work on IE 6 or 7</p>
+        <p class="fragment">Except... This won't work on IE 6 or 7</p>
         <p class="sassmeister"><a href="http://sassmeister.com/gist/startinggravity/4f7f692eb60e92c23ece" title="Sassmeister" target="_blank">http://sassmeister.com/gist/startinggravity/4f7f692eb60e92c23ece</a></p>
         <aside class="notes">
 To make an image fit any device, make it scalable. Fortunately, just a little bit of CSS will make that happen.
@@ -124,7 +122,6 @@ Setting max-width to 100% ensures the image does not scale larger than its actua
         <pre><code>
   img {
     width: 100%;
-    height: auto;
   }
         </code></pre>
 
@@ -155,7 +152,6 @@ Responsive sites need more than just resizable images!
           <pre><code>
   img {
     max-width: 100%;
-    height: auto;
   }
           </code></pre>
           <aside class="notes">

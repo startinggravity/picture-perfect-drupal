@@ -1,4 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic);
+
 /**
  * Default theme for reveal.js.
  *
@@ -172,16 +173,16 @@ body {
 /*********************************************
  * My Stuff
  *********************************************/
- .reveal span.invisible {
-   position: absolute;
-   width: 1px; /* Setting this to 0 make it invisible for VoiceOver */
-   height: 1px; /* Setting this to 0 make it invisible for VoiceOver */
-   padding: 0;
-   margin: -1px;
-   border: 0;
-   clip: rect(0 0 0 0);
-   overflow: hidden;
- }
+.reveal span.invisible {
+  position: absolute;
+  width: 1px; /* Setting this to 0 make it invisible for VoiceOver */
+  height: 1px; /* Setting this to 0 make it invisible for VoiceOver */
+  padding: 0;
+  margin: -1px;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
 
 .reveal .state-background {
   background: transparent url(../images/dsfederal.png) no-repeat 2% 98%;
@@ -193,7 +194,7 @@ body {
   -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)"; /* For IE 8*/
 }
 
-.reveal ul.text-background  {
+.reveal ul.text-background {
   margin: 0 0 0 0;
 }
 
@@ -206,7 +207,6 @@ body {
   border: none;
   box-shadow: none;
 }
-
 
 .text-large {
   font-size: 50px !important;
@@ -235,4 +235,4 @@ body {
 
 .easy-fix pre code {
   padding: 40px;
- }
+}

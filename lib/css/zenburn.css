@@ -6,7 +6,8 @@ based on dark.css by Ivan Sagalaev
 */
 
 pre code {
-  display: block; padding: 0.5em;
+  display: block;
+  padding: 0.5em;
   background: #3F3F3F;
   color: #DCDCDC;
 }
@@ -65,7 +66,7 @@ pre .apache .tag,
 pre .nginx .built_in,
 pre .tex .command,
 pre .prompt {
-    color: #efef8f;
+  color: #efef8f;
 }
 
 pre .dos .winutils,
